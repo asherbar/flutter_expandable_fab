@@ -118,11 +118,7 @@ class _FirstPageState extends State<FirstPage> {
           FloatingActionButton.small(
             child: const Icon(Icons.edit),
             onPressed: () {
-              final state = _key.currentState;
-              if (state != null) {
-                debugPrint('isOpen:${state.isOpen}');
-                state.toggle();
-              }
+              _key.currentState?.toggle();
             },
           ),
         ],
